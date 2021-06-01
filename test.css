@@ -1,11 +1,12 @@
 body{
-  margin-top: : 60px;
+  margin-top: 60px;
   margin-bottom: 60px;
   margin-left: 120px;
   margin-right: 120px;
   color: black;
   background-color: white;
   font-family: "raleway" ;
+  word-wrap: break-word;
 }
 
 /* Titre et police */
@@ -32,46 +33,61 @@ h2{
 .page{
 
   margin: 5px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+  
+
+}
+
+#conteneur
+{
+    display: flex;
+    flex-wrap: wrap; /* Retour à la ligne */
+    justify-content: space-around;
+    justify-content: left;
+    padding: 2px;
+}
+
+.sec1{
+	padding: 2px;
+	margin: 10px;
 
 }
 .herbergement {
-  
-  padding: 10px; /* espace interne  */
+
+  padding: 2px;
+  float: left;
+  text-align: justify;
+  /*  margin: auto; On peut donc demander à ce que le bloc soit centré avec auto */
   background-color: #F2F2F2;
   border-radius: 10px 10px 10px 10px ;
-  position: margin-left  ;
-  grid-column: 1/3 ;
-  grid-row: 1 ;
+  /* width: 650px;  On a indiqué une largeur (obligatoire) */
+  width: 70%;
 
-
-
+ 
 }
+
+
 .populaire{
 
-  display: inline-block;
-  padding: 10px;
+
+  padding: 5px;
+  float: right;
   margin-left : 10px;
   background-color: #F2F2F2;
   border-radius: 10px 10px 10px 10px ;
-  position: margin-right; 
-  grid-column: 3 ;
-  grid-row: 1 ;
-  /*grid-row: 1 / 3; */
+
 }
 
-.activité{
 
-  padding: 10px; 
-  margin-top: 10px;
+.activité{
+ 
+ 	display: block;
+ 	margin: 10px;
+ 	padding: 10px;
+	float: bottom;
+  margin-top: 40%;
   border-radius: 10px 10px 10px 10px ;
-  position: bottom ; 
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row: 2;
+  background-color: lightpink;
+ 
 
 }
 
@@ -81,11 +97,6 @@ h2{
   margin-top: 10px;
   background-color: #F2F2F2;
   border-radius: 10px 10px 10px 10px ;
-  position: bottom:  ; 
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row: 3;
-   
 
 }
 
@@ -95,6 +106,7 @@ h2{
       padding:15px;
       text-align: justify;
       position: relative;
+      background-color: lightpink;
 }
 
 /* Barre de recherche*/
@@ -174,16 +186,7 @@ h2{
 
 }
 
-/* Grille des images */
-.gallery-grid {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 5px;
-  justify-items: center;
-  margin: 0;
-  padding: 0;
-}
+
 
 /* The Picture Frame */
 .gallery-frame {
@@ -199,14 +202,16 @@ h2{
 }
 
 /* The Images */
-.gallery-img {
-  width: 70% ;
+.imag {
+	display: block;
+  width: 200px ;
+  height: 100px;
   
   object-fit: cover;
   transition: opacity 0.25s ease-in-out;
 }
 
-.gallery-img:hover {
+.imag:hover {
   opacity: .7;
 }
 
