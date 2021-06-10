@@ -14,7 +14,12 @@ body{
 h2{
 	font-family: "raleway";
 	color: black;
- 	font-size: 19px;
+ 	font-size: 22px;
+  font-weight: bold;
+}
+
+p{
+  font-size: 19px;
 }
 
 
@@ -37,13 +42,18 @@ h2{
 
 }
 
-#conteneur
+.row{
+
+  display: flex;
+}
+
+.conteneur
 {
     display: flex;
     flex-wrap: wrap; /* Retour à la ligne */
     justify-content: space-around;
-    justify-content: left;
     padding: 2px;
+    margin: 10px;
 }
 
 .sec1{
@@ -52,23 +62,22 @@ h2{
 	display: inline-block;
 
 }
+
+
 .herbergement {
 
   padding: 10px;
   float: left;
   text-align: justify;
-  /*  margin: auto; On peut donc demander à ce que le bloc soit centré avec auto */
   background-color: #F2F2F2;
   border-radius: 10px 10px 10px 10px ;
- 
-  
 
- 
 }
 
 
 .populaire{
 
+  float: left;
   padding: 10px;
   margin: 10px;
   background-color: #F2F2F2;
@@ -94,23 +103,33 @@ h2{
   margin-top: 10px;
   background-color: #F2F2F2;
   border-radius: 10px 10px 10px 10px ;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
 
 }
 
 .basdepage div{
 
-      display: inline-block; /* Aligne les div sur le coté*/
-      padding:15px;
-      text-align: justify;
-      position: relative;
-      background-color: #00B4CC;
+    padding: 10px;
+    
+    width: 30%;
+    height: auto;
 }
 
 
 
 details {
-  display: block;
+    display: flex;
 }
+
+details .conteneur{
+    justify-content: space-around;
+    float: left;
+    
+}
+
+
 
 /* Barre de recherche*/
 
@@ -166,7 +185,6 @@ details {
 #navigation li {
   display: inline;
   padding: 15px;
-  text-decoration: overline;
   float: right;
 }
 
@@ -177,56 +195,67 @@ details {
   margin: 20px;
   border: 10px;
   outline: none;
-  padding: 12px 16px;
   background-color: white;
   border: 1px solid lightgrey;
   cursor: pointer;
   font-size: 15px;
   color :  black;
-  font-weight: bold;
+ 
   border-radius: 30px 30px 30px 30px;
-  padding-block: 10px;
+  padding-left:  0px;
+  padding-right: 20px;
+
+}
+
+.filtrebouton:hover{
+
+  background-color: #005fcc;
+  opacity: .7;
+  font-weight: bold;
+}
+
+button i {
+    background-color: #e6e6e6;
+    color: #005fcc;
+    border-radius: 50%;
+    padding: 20px;
 
 }
 
 
-
-/* The Picture Frame */
-.gallery-frame {
-
-
-  padding: .5rem;
-  font-size: 1.2rem;
-  text-align: center;
-  background-color: #FFFFFF;
-  border-radius: 10px 10px 10px 10px ;
-  color: blue;
-  box-shadow: 5px 10px 18px #aaa; 
+div p{
+  margin: auto;
 }
 
 /* The Images */
 .imag {
 	display: block;
-  width: 250px ;
+  width: 300px ;
   height: 120px;
   
   object-fit: cover;
   transition: opacity 0.25s ease-in-out;
 }
 
-.imag:hover {
+.imag:hover, .imagacti:hover {
+
   opacity: .7;
 }
-
+.contour:hover, .popu:hover {
+ 
+  transform: scale(1.1); 
+  cursor: pointer;
+}
 .contour{
 
 	
   padding: .5rem;
+  justify-content: space-around;
   font-size: 1.2rem;
-  text-align: center;
+  text-align: left;
   background-color: #FFFFFF;
   border-radius: 10px 10px 10px 10px ;
-  color: blue;
+  color: rgb(27, 27, 27);
   box-shadow: 5px 10px 18px #aaa; 
 
 }
@@ -237,8 +266,18 @@ details {
   padding: .5rem;
   font-size: 1.2rem;
   text-align: center;
+  display: flex; /* met le texte a droite */
   background-color: #FFFFFF;
   border-radius: 10px 10px 10px 10px ;
   box-shadow: 5px 10px 18px #aaa; 
 }
 
+/* Etoiles evaluation */
+
+.checked {
+    color: #005fcc;
+}
+
+div span {
+    color: rgb(202, 202, 202);
+}
