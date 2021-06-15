@@ -1,4 +1,5 @@
 body{
+
   margin-top: 60px;
   margin-bottom: 60px;
   margin-left: 120px;
@@ -12,10 +13,22 @@ body{
 /* Titre et police */
 
 h2{
+
 	font-family: "raleway";
 	color: black;
  	font-size: 21px;
   font-weight: bold;
+}
+
+h3{
+
+  font-family: "raleway";
+  color: black;
+  font-size: 21px;
+  font-weight: bold;
+  text-indent: 15px;
+  padding: 10px;
+  
 }
 
 p{
@@ -39,12 +52,19 @@ p{
 
   margin: 5px;
   
-
 }
 
-.row{
+/* .row{
 
   display: flex;
+  flex-wrap: wrap;
+} */
+
+.main{
+
+  display: flex; /* empeche le retour à la ligne */
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
 .conteneur
@@ -79,7 +99,6 @@ p{
 
   float: left;
   padding: 40px;
-  margin: 10px;
   background-color: #F2F2F2;
   border-radius: 10px 10px 10px 10px ;
 
@@ -95,23 +114,43 @@ p{
  
   flex-wrap: wrap; /* Retour à la ligne */
   justify-content: space-around;
- 	margin: 10px;
- 	padding: 40px;
+ 	margin-top: 10px;
+ 	padding-top: 40px;
+  padding-bottom: 40px;
   border-radius: 10px 10px 10px 10px ;
-  background-color: lightpink;
+  /* background-color: lightpink; */
  
+
+}
+
+.actigrid{
+
+  display: flex;
+ justify-content: space-around;
+ align-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* height: 550px; */
 
 }
 
 .actigrdbloc{
 
-  display: flex;
-  
-  justify-content: flex-start;
-  /* height: 550px; */
-  
-
+  /* align-content: center; */
+  align-items: start;
+  justify-content: space-between;
+  display: inline-grid;
+  /* margin-top: auto;
+    margin-bottom: auto ; */
 }
+
+.contouract:nth-child(2) /* On prend le deuxième bloc élément */
+{
+  
+    align-self: flex-end; /* Seul ce bloc sera aligné à la fin */
+}
+
+/* ... */
 
 
 .basdepage{
@@ -151,38 +190,37 @@ details .conteneur{
 /* Barre de recherche*/
 
 
+
 .search {
-  width: 100%;
-  position: relative;
   display: flex;
-}
-
-.searchTerm {
-  
-  border: 2px solid #F2F2F2;
-  padding: 7px;
-  height: 20px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #9DBFAF;
-}
-
-.searchTerm:focus{
-  color: #00B4CC;
 }
 
 .searchButton {
 
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border: 1px solid #00B4CC;
+  padding: 7px;
+  border: 2px solid #0052ce;
   background: #0065FC;
   text-align: center;
   color: #fff;
   border-radius: 0 10px 10px 0;
   cursor: pointer;
-  font-size: 15px;
+
+}
+.searchTerm {
+  
+  border: 2px solid #F2F2F2;
+  padding: 7px;
+  outline-color: #32a1ce;
+  color: #9DBFAF;
+}
+
+form span i{ /* icone map */
+  color: black;
+  background-color: #F2F2F2;
+  padding: 10px;
+  padding-bottom: 11px;
+  border-radius: 10px 0 0 10px;
+  border: 2px solid #F2F2F2;
 
 }
 
@@ -266,18 +304,58 @@ div p{
 /* The Images */
 .imag {
 	display: block;
-  width: 300px ;
+  width: 280px ;
   height: 120px;
-  
+  border-radius: 10px 10px 0px 0px ;
   object-fit: cover;
   transition: opacity 0.25s ease-in-out;
 }
 
-.imag:hover, .imagacti:hover {
+.imagpopu {
+  display: block;
+  width: 250px ;
+  height: 120px;
+  border-radius: 10px 0px 0px 10px ;
+  object-fit: cover;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.imagactigrd {
+
+  display: flex;
+  width: 350px ;
+  height: 600px;
+  border-radius: 20px 20px 0px 0px ;
+  object-fit: cover;
+  transition: opacity 0.25s ease-in-out;
+  /* margin-bottom: 20px; */
+}
+
+.imagacti2 {
+
+  
+  width: 350px ;
+  height: 240px;
+  border-radius: 20px 20px 0px 0px ;
+  object-fit: cover;
+  transition: opacity 0.25s ease-in-out;
+}
+.imagacti3 {
+
+  
+  width: 350px ;
+  height: 180px;
+  border-radius: 20px 20px 0px 0px ;
+  object-fit: cover;
+  transition: opacity 0.25s ease-in-out;
+}
+
+
+.imag:hover, .imagacti:hover, .imagpopu:hover {
 
   opacity: .7;
 }
-.contour:hover, .popu:hover {
+.contour:hover, .popu:hover,.contouract:hover{
  
   transform: scale(1.1); 
   cursor: pointer;
@@ -298,8 +376,8 @@ div p{
 
 .contouract{
 
-  text-indent: 5px;
-  padding-bottom: 2.5rem;
+  /* text-indent: 5px; */
+  /* padding-bottom: 2.5rem; */
   background-color: #FFFFFF;
   border-radius: 20px 20px 20px 20px ;
   box-shadow: 5px 10px 18px #aaa;
@@ -322,42 +400,6 @@ div p{
   box-shadow: 5px 10px 18px #aaa; 
 }
 
-.imagactigrd {
-
-  display: flex;
-  width: 240px ;
-  height: 100%;
-  border-radius: 20px 20px 0px 0px ;
-  object-fit: cover;
-  transition: opacity 0.25s ease-in-out;
-}
-.imagacti {
-
-  
-  width: 200px ;
-  height: 300px;
-  border-radius: 20px 20px 20px 20px ;
-  object-fit: cover;
-  transition: opacity 0.25s ease-in-out;
-}
-.imagacti2 {
-
-  
-  width: 200px ;
-  height: 180px;
-  border-radius: 20px 20px 20px 20px ;
-  object-fit: cover;
-  transition: opacity 0.25s ease-in-out;
-}
-.imagacti3 {
-
-  
-  width: 200px ;
-  height: 140px;
-  border-radius: 20px 20px 20px 20px ;
-  object-fit: cover;
-  transition: opacity 0.25s ease-in-out;
-}
 
 /* Etoiles evaluation */
 

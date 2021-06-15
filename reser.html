@@ -30,9 +30,7 @@
       <div>
         <form class="search">
 
-          <span><i class="fa fa-map-marker"></i>
-            <input type="text" class="searchTerm" placeholder="Marseille, France">
-            <button type="submit" class="searchButton">Rechercher</button></span>
+          <span><i class="fas fa-map-marker-alt"></i><input type="text" class="searchTerm" placeholder="Marseille, France"><button type="submit" class="searchButton">Rechercher</button></span>
 
           </form>
         </div>
@@ -58,11 +56,14 @@
     </header>
 
     <div class="row">
-      <div class="col-8">
+      <div class="main">
+        
+      
+      <div id="herbergements" class="col-12 col-lg-8">
 
         <div class="herbergement">
 
-          <h2 id="herbergements"> Hébergements à Marseille</h2>
+          <h2> Hébergements à Marseille</h2>
 
           <div class="conteneur">
 
@@ -161,7 +162,7 @@
 
           </div><!-- fin des images hebergements -->
 
-          <details>
+        <details>
             <summary><strong>Afficher plus</strong></summary>
 
             <div class="conteneur">
@@ -215,68 +216,80 @@
 
       </div> <!-- herbegement -->
       
-    </div> <!-- col -->
+      </div> <!-- col -->
 
-    <div class="col-4">
-      <div class ="populaire">
-        <div class="poputitre">
-          <h2 id="populaires"> Les plus populaires </h2><i class="fa fa-line-chart"></i>
-        </div>
+      <div class="col-12 col-lg-4">
+        <div class ="populaire">
+          <div class="poputitre">
+            <h2 id="populaires"> Les plus populaires </h2><i class="fa fa-line-chart"></i>
+          </div>
 
-        <div class="conteneur">
-          <figure class="popu">
-            <img  class="imag" src="images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="symbol image" title="symbol image">
-            <figcaption><h2>Hôtel Le soleil du matin</h2></figcaption>
+          <div class="conteneur">
+            <figure class="popu">
+              <img  class="imagpopu" src="images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="symbol image" title="symbol image">
+              <figcaption>
+                <h2>Hôtel Le soleil du matin</h2>
+                <div>
+                <p>Nuit à partir de <strong>128€</strong></p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
 
-            <div>
-              <p>Nuit à partir de <strong>128€</strong></p>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-            </div>
-          </figure>
+              </figcaption>
 
-          <figure class="popu">
-            <img class="imag" src="images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="symbol image" title="symbol image">
-            <figcaption><h2>Au coeur de l'eau Chambres d'hôtes</h2></figcaption>
+              
+            </figure>
 
-            <div>
-              <p>Nuit à partir de <strong>71€</strong></p>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-            </div>
-          </figure>
+            <figure class="popu">
+              <img class="imagpopu" src="images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="symbol image" title="symbol image">
+              <figcaption>
+                <h2>Au coeur de l'eau Chambres d'hôtes</h2>
+                <div>
+                <p>Nuit à partir de <strong>71€</strong></p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+              </div>
 
-          <figure class="popu">
-            <img  class="imag" src="images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="symbol image" title="symbol image">
-            <figcaption><h2>Hôtel Tout bleu et Blanc</h2></figcaption>
+              </figcaption>
 
-            <p>Nuit à partir de <strong>68€</strong></p>
-            <div>
+              
+            </figure>
 
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-            </div>
+            <figure class="popu">
+              <img  class="imagpopu" src="images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="symbol image" title="symbol image">
+              <figcaption>
+                <h2>Hôtel Tout bleu et Blanc</h2>
+                <div>
+                <p>Nuit à partir de <strong>68€</strong></p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+              </div>
 
-          </figure>
+              </figcaption>
+
+              
+
+
+            </figure>
+            
+
+          </div><!-- fin des images -->
           
-
-        </div><!-- fin des images -->
+        </div> <!-- populaire -->
         
-      </div> <!-- populaire -->
-      
-    </div> 
+      </div> 
 
 
-    
+    </div>
   </div> <!-- row -->
 
   
@@ -287,35 +300,39 @@
       
       <div>
         <div class="actigrid">
-        <div class ="actigrdbloc">
-          <figure class="contouract">
-            <img class="imagactigrd" src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="symbol image" title="symbol image">
-            <figcaption>Vieux Port</figcaption>
-          </figure>
-          <figure class="contouract">
-            <img class="imagacti2" src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="symbol image" title="symbol image">
-            <figcaption>Fort de Pomègues</figcaption>
-          </figure>
-          <figure class="contouract">
-            <img class="imagacti3" src="images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="symbol image" title="symbol image">
-            <figcaption>Iles du Frioul</figcaption>
-          </figure>
-        </div>
+          <div class ="actigrdbloc">
+            <figure class="contouract">
+              <img class="imagactigrd" src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="symbol image" title="symbol image">
+              <figcaption><h3>Vieux Port</h3></figcaption>
+            </figure>
+          </div>
+          <div class ="actigrdbloc">
+            <figure class="contouract">
+              <img class="imagacti2" src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="symbol image" title="symbol image">
+              <figcaption><h3>Fort de Pomègues</h3></figcaption>
+            </figure>
+            <figure class="contouract">
+              <img class="imagacti3" src="images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="symbol image" title="symbol image">
+              <figcaption><h3>Iles du Frioul</h3></figcaption>
+            </figure>
+          </div>
 
-        <div class ="actigrdbloc">
-          <figure class="contouract">
-            <img class="imagactigrd" src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="symbol image" title="symbol image">
-            <figcaption>VParc National des Calanques</figcaption>
-          </figure>
-          <figure class="contouract">
-            <img class="imagacti2" src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="symbol image" title="symbol image">
-            <figcaption>Notre-Dame-de-la-Garde</figcaption>
-          </figure>
-          <figure class="contouract">
-            <img class="imagacti3" src="images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="symbol image" title="symbol image">
-            <figcaption>Parc Longchamp</figcaption>
-          </figure>
-        </div>
+          <div class ="actigrdbloc">
+            <figure class="contouract">
+              <img class="imagactigrd" src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="symbol image" title="symbol image">
+              <figcaption><h3>Parc National des Calanques</h3></figcaption>
+            </figure>
+          </div>
+          <div class ="actigrdbloc">
+            <figure class="contouract">
+              <img class="imagacti3" src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="symbol image" title="symbol image">
+              <figcaption><h3>Notre-Dame-de-la-Garde</h3></figcaption>
+            </figure>
+            <figure class="contouract">
+              <img class="imagacti2" src="images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="symbol image" title="symbol image">
+              <figcaption><h3>Parc Longchamp</h3></figcaption>
+            </figure>
+          </div>
 
       </div> 
       </div>
