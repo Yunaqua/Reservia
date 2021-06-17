@@ -54,12 +54,6 @@ p{
   
 }
 
-/* .row{
-
-  display: flex;
-  flex-wrap: wrap;
-} */
-
 .main{
 
   display: flex; /* empeche le retour à la ligne */
@@ -87,6 +81,7 @@ p{
 .herbergement {
 
   padding: 40px;
+  margin-bottom: 20px;
   float: left;
   text-align: justify;
   background-color: #F2F2F2;
@@ -99,6 +94,7 @@ p{
 
   float: left;
   padding: 40px;
+  margin-bottom: 20px;
   background-color: #F2F2F2;
   border-radius: 10px 10px 10px 10px ;
 
@@ -128,7 +124,7 @@ p{
   display: flex;
  justify-content: space-around;
  align-content: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
   /* height: 550px; */
 
@@ -155,7 +151,7 @@ p{
 
 .basdepage{
 
-  padding: 10px; 
+  padding: 30px; 
   margin-top: 10px;
   background-color: #F2F2F2;
   border-radius: 10px 10px 10px 10px ;
@@ -184,8 +180,6 @@ details .conteneur{
     float: left;
     
 }
-
-
 
 /* Barre de recherche*/
 
@@ -224,6 +218,17 @@ form span i{ /* icone map */
 
 }
 
+.icon-background {
+    color: white;
+    border: 2px solid #F2F2F2;
+    border-radius: 50%;
+    
+}
+
+.fa-info {
+  color:blue;
+}
+
 .searchposition {
 
   padding: 5px;
@@ -239,8 +244,10 @@ form span i{ /* icone map */
 /* Menu*/
 
 header ul {
+
         float: right;
-    }
+}
+
 #navigation li {
   display: inline;
   padding: 25px;
@@ -293,7 +300,6 @@ button i {
     color: #005fcc;
     border-radius: 50%;
     padding: 20px;
-
 }
 
 
