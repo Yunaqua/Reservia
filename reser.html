@@ -12,7 +12,8 @@
 
 <body>
   <header>
-    <div class="navigations">
+    <div class="container">
+      <div class="navigations">
 
       <ul id="navigation">
         <li><a href="#herbergements" title="Hebergements">Hébergements</a></li>
@@ -42,28 +43,33 @@
 
           <strong>Filtres</strong> 
           
-          <button class="filtrebouton" onclick="filterSelection('economique')"><i class="fas fa-money-bill-wave"></i> Economique</button>
-          <button class="filtrebouton" onclick="filterSelection('familial')"><i class="fa fa-child"></i> Familial</button>
-          <button class="filtrebouton" onclick="filterSelection('romantique')"><i class="fa fa-heart"></i> Romantique</button>
-          <button class="filtrebouton" onclick="filterSelection('animaux')"><i class="fas fa-dog"></i> Animaux autorisés</button>
+          <button class="filtrebouton" onclick="filterSelection('economique')"><i class="fas fa-money-bill-wave"></i><strong>Economique</strong></button>
+          <button class="filtrebouton" onclick="filterSelection('familial')"><i class="fa fa-child"></i><strong>Familial</strong></button>
+          <button class="filtrebouton" onclick="filterSelection('romantique')"><i class="fa fa-heart"></i><strong>Romantique</strong></button>
+          <button class="filtrebouton" onclick="filterSelection('animaux')"><i class="fas fa-dog"></i><strong>Animaux autorisés</strong></button>
         </div>
 
 
       </div>
 
-      <p><i class="fas fa-info-circle" style="font-size: 20px; color: Dodgerblue;" ></i>En plein centre ville ou en pleine nature</p>
+      <p><span class="fa-stack fa">
+  <i class="fa fa-circle fa-stack icon-background"></i>
+  <i class="fa fa-info fa-stack-1x"></i> 
+ </span>Plus de 500 logements sont disponibles dans cette ville</p>
+    </div>
+    
 
     </header>
-
-    <div class="row">
-      <div class="main">
+    <div class="container">
+      <div class="row">
+    
         
       
-      <div id="herbergements" class="col-12 col-lg-8">
+      <div class="col-12 col-lg-8">
 
         <div class="herbergement">
 
-          <h2> Hébergements à Marseille</h2>
+          <h2 id="herbergements"> Hébergements à Marseille</h2>
 
           <div class="conteneur">
 
@@ -288,9 +294,9 @@
         
       </div> 
 
-
-    </div>
   </div> <!-- row -->
+    </div>
+    
 
   
 
@@ -344,7 +350,8 @@
 
 
   <footer class ="basdepage">
-    <div >
+    <div class="container">
+      <div >
 
       <ul class="list">
         <li><h2>A propos</h2></li>
@@ -372,6 +379,8 @@
         <li>Nous contacter</li>
       </ul>
     </div>
+    </div>
+    
 
     
 
