@@ -8,6 +8,7 @@ body{
   background-color: white;
   font-family: "raleway" ;
   word-wrap: break-word;
+
 }
 
 /* Titre et police */
@@ -18,6 +19,7 @@ h2{
 	color: black;
  	font-size: 19px;
   font-weight: bold;
+  overflow-wrap: anywhere;
 }
 
 h3{
@@ -54,6 +56,11 @@ p{
   
 }
 
+.main{
+  margin: auto;
+  max-width: 1300px;
+}
+
 /* .main{
 
   display: flex; 
@@ -62,20 +69,35 @@ p{
 } */
 
 .container{
-  max-width: 1300px;
-  margin: auto;
+  
+  flex-wrap: wrap;
+  align-items: flex-start;
+  
 
 }
 
+.container1{
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+}
+aside{
+  float:left;
+
+}
 section{
   display: flex;
+  flex-direction: column;
+
 }
 
 .conteneur
 {
     display: flex;
     flex-wrap: wrap; /* Retour à la ligne */
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 2px;
     margin: 10px;
 }
@@ -90,23 +112,28 @@ section{
 
 .herbergement {
 
-  padding: 40px;
+  display: flex;
+  padding: 20px;
   margin-bottom: 20px;
   float: left;
   text-align: justify;
   background-color: #F2F2F2;
   border-radius: 10px 10px 10px 10px ;
+  width: 60%;
+  margin: 10px;
 
 }
 
 
 .populaire{
 
-  float: left;
-  padding: 40px;
+  /* float: left; */
+  padding: 20px;
   margin-bottom: 20px;
   background-color: #F2F2F2;
   border-radius: 10px 10px 10px 10px ;
+  width: 30%;
+  margin: 5px;
 
 }
 .poputitre{
@@ -224,8 +251,8 @@ details .conteneur{
 form span i{ /* icone map */
   color: black;
   background-color: #F2F2F2;
-  padding: 10px;
-  padding-bottom: 11px;
+  padding: 5px;
+  padding-bottom: 7px; 
   border-radius: 10px 0 0 10px;
   border: 2px solid #F2F2F2;
 
@@ -383,6 +410,7 @@ div p{
 
 	
   padding: .5rem;
+  margin: 2px;
   justify-content: space-around;
   font-size: 1.2rem;
   text-align: left;
