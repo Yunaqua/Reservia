@@ -58,7 +58,7 @@ p{
 
 .main{
   margin: auto;
-  max-width: 1300px;
+  max-width: 1500px;
 }
 
 /* .main{
@@ -102,38 +102,36 @@ section{
     margin: 10px;
 }
 
-/* .sec1{
-	padding: 2px;
-	margin: 10px;
-	display: inline-block;
+.flex-container {
+   display: flex;
+  flex-wrap: wrap;
+}
 
-} */
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .populaire, .hebergement {
+    flex: 100%;
+  }
+}
 
+.hebergement {
 
-.herbergement {
-
-  display: flex;
-  padding: 20px;
-  margin-bottom: 20px;
-  float: left;
-  text-align: justify;
-  background-color: #F2F2F2;
-  border-radius: 10px 10px 10px 10px ;
-  width: 60%;
-  margin: 10px;
+ background-color: #f1f1f1;
+ border-radius: 10px 10px 10px 10px ;
+  padding: 10px;
+  flex: 65%;
 
 }
 
-
+* { /* tous les elements */
+  box-sizing: border-box;
+}
 .populaire{
 
-  /* float: left; */
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: #F2F2F2;
+  background-color: dodgerblue;
   border-radius: 10px 10px 10px 10px ;
-  width: 30%;
-  margin: 5px;
+  padding: 10px;
+  flex: 35%;
 
 }
 .poputitre{
@@ -209,17 +207,6 @@ section{
     height: auto;
 }
 
-
-
-details {
-    display: flex;
-}
-
-details .conteneur{
-    justify-content: space-around;
-    float: left;
-    
-}
 
 /* Barre de recherche*/
 
@@ -401,6 +388,8 @@ div p{
 
   opacity: .7;
 }
+
+/* Contour */
 .contour:hover, .popu:hover,.contouract:hover{
  
   transform: scale(1.1); 
