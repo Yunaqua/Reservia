@@ -2,6 +2,7 @@
 <html>
   <head>
    <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- mediaquery -->
 
    <link href="flex.css"  rel="stylesheet" type="text/css"/>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> <!-- Icone de recherche -->
@@ -15,16 +16,17 @@
 
       <header>
         <div class="container">
+          
           <div class="navigations">
-
+            <img class="reservia" src="images/logo/Reservia@3x.png" alt="Reservia" title="Reservia"></i>
             <ul id="navigation">
               <li><a href="#hebergements" title="Hebergements">Hébergements</a></li>
               <li><a href="#activites" title="Activité">Activité</a></li>
               <li><a href="#" title="S'inscrire">S'inscrire</a></li>
             </ul>
-            <img src="images/logo/Reservia@3x.png" alt="Reservia" width="10%" />
-          </div>
-        </div>
+            
+          </div> <!-- navigations -->
+        </div> <!-- container -->
 
       </header>
 
@@ -71,10 +73,8 @@
       <section id="hebergements">
         <div class="container">
           <div  class="flex-container">
-            <article class="hebergement">
-             <div >
-
-                <h2> Hébergements à Marseille</h2>
+            <div class="hebergement">
+              <h2> Hébergements à Marseille</h2>
 
                 <div class="conteneur">
 
@@ -173,81 +173,81 @@
 
                 </div><!-- fin des images hebergements -->
 
-             
+             <h2>Affichez plus</h2>
 
-            </div> <!-- herbegement -->
-          </article>
+           </div><!-- herbegement -->
 
-          <aside class ="populaire">
-            <div >
-              <div class="poputitre">
-                <h2> Les plus populaires </h2><i class="fa fa-line-chart"></i>
-              </div>
+            <div class ="populaire">
+              <div >
+                <div class="poputitre">
+                  <h2> Les plus populaires </h2><i class="fa fa-line-chart"></i>
+                </div>
 
-              <div class="conteneur">
+                <div class="conteneur">
 
-                <figure class="popu">
-                  <img  class="imagpopu" src="images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="symbol image" title="symbol image">
-                  <figcaption>
-                    <h2>Hôtel Le soleil du matin</h2>
-                    <div>
-                    <p>Nuit à partir de <strong>128€</strong></p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                  </div>
+                  <figure class="popu">
+                    <img src="images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="symbol image" title="symbol image">
+                    <figcaption>
+                      <h2>Hôtel Le soleil du matin</h2>
+                      <div>
+                      <p>Nuit à partir de <strong>128€</strong></p>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                    </div>
 
-                  </figcaption>
+                    </figcaption>
 
+                    
+                  </figure>
+
+                  <figure class="popu">
+                    <img src="images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="symbol image" title="symbol image">
+                    <figcaption>
+                      <h2>Au coeur de l'eau Chambres d'hôtes</h2>
+                      <div>
+                      <p>Nuit à partir de <strong>71€</strong></p>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+
+                    </figcaption>
+
+                    
+                  </figure>
+
+                  <figure class="popu">
+                    <img src="images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="symbol image" title="symbol image">
+                    <figcaption>
+                      <h2>Hôtel Tout bleu et Blanc</h2>
+                      <div>
+                      <p>Nuit à partir de <strong>68€</strong></p>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+
+                    </figcaption>
+
+                    
+
+
+                  </figure>
                   
-                </figure>
 
-                <figure class="popu">
-                  <img class="imagpopu" src="images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="symbol image" title="symbol image">
-                  <figcaption>
-                    <h2>Au coeur de l'eau Chambres d'hôtes</h2>
-                    <div>
-                    <p>Nuit à partir de <strong>71€</strong></p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                  </div>
-
-                  </figcaption>
-
-                  
-                </figure>
-
-                <figure class="popu">
-                  <img  class="imagpopu" src="images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="symbol image" title="symbol image">
-                  <figcaption>
-                    <h2>Hôtel Tout bleu et Blanc</h2>
-                    <div>
-                    <p>Nuit à partir de <strong>68€</strong></p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                  </div>
-
-                  </figcaption>
-
-                  
-
-
-                </figure>
+                </div><!-- fin des images -->
                 
-
-              </div><!-- fin des images -->
-              
+              </div> <!-- populaire -->
             </div> <!-- populaire -->
-          </aside>
-          </div>
+
+          </div> <!-- flex-container -->
           
         </div> <!-- container -->
         
@@ -255,7 +255,8 @@
 
       <section id="activites" >
         <div class="container">
-          <div class ="activite">
+          <div>
+              <div class ="activite">
             <h2> Activité à Marseille</h2>
             
             <div>
@@ -300,23 +301,26 @@
             
             
           </div> <!-- activite -->
+          </div> <!-- flex-container -->
+        
           
         </div> <!-- container -->
         
       </section> <!-- section3 -->
 
       <footer class ="container">
-        <div class="basdepage">
-          <div >
+          <div class="basdepage">
+         
+            <div >
 
-          <ul class="list">
-            <li><h2>A propos</h2></li>
-            <li>Fonctionnelent du site</li>
-            <li>Conditions générales de vente</li>
-            <li>Données et confidentialité</li>
-          </ul>
+            <ul class="list">
+              <li><h2>A propos</h2></li>
+              <li>Fonctionnelent du site</li>
+              <li>Conditions générales de vente</li>
+              <li>Données et confidentialité</li>
+            </ul>
 
-        </div>
+          </div>
 
         <div>
 
@@ -335,9 +339,14 @@
             <li>Nous contacter</li>
           </ul>
         </div>
-        </div> <!-- container -->
+         
+
+          
+
+        </div> <!-- basdepage -->
         
-      </footer>
+        
+      </footer>  <!-- container -->
 
     </div> <!-- main -->
     
