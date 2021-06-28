@@ -1,5 +1,7 @@
 
-
+html {
+  scroll-behavior: smooth;
+}
 /* Titre et police */
 
 h2{
@@ -9,8 +11,11 @@ h2{
  	font-size: 19px;
   font-weight: bold;
   overflow-wrap: anywhere;
+ 
 }
-
+.popu h2{
+  text-indent: 10px; 
+}
 h3{
 
   font-family: "raleway";
@@ -26,6 +31,33 @@ p{
   font-size: 15px;
 }
 
+div p{
+  margin: auto;
+}
+
+.info{
+  margin: 10px;
+  padding : 10px;
+}
+
+div span {
+    color: rgb(202, 202, 202);
+}
+
+p em{
+  padding-left: 10px;
+}
+
+#filtre p{
+  font-weight: bold;
+  padding-top: 20px;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+.gna{
+  justify-content: left;
+  justify-items: left;
+}
 
 .list {
   list-style: none;
@@ -47,7 +79,7 @@ p{
 
 .main{
   margin: auto;
-  max-width: 1500px;
+  max-width: 1400px;
 }
 
 
@@ -59,7 +91,7 @@ p{
 }
 
 .container1{
-  max-width: 1300px;
+  max-width: 1250px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -72,6 +104,7 @@ aside{
 section{
   display: flex;
   flex-direction: column;
+  margin: 25px 0 25px 0;
 
 }
 
@@ -92,35 +125,6 @@ section{
 
 }
 
-.flex-container1 {
-   display: flex;
-
-
-}
-
-/* Responsive layout - makes a one column-layout instead of a two-column layout */
-@media (max-width: 800px) {
-  .populaire, .hebergement, .activite, .actigrid, footer{
-    flex: 100%;
-    margin-top: 10%;
-    margin-right: 0%;
-    justify-content: center;
-  }
-
-  .conteneur {
-    margin: 10px;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .flex-container {
-   justify-content: center;
-
-  }
-
-}
-
 .hebergement {
 
  background-color: #f1f1f1;
@@ -137,10 +141,11 @@ section{
 }
 .populaire{
 
-  background-color: dodgerblue;
+  background-color: #f1f1f1;
   border-radius: 10px 10px 10px 10px ;
   padding: 10px;
   flex: 35%;
+  height: min-content;
 
 }
 .poputitre{
@@ -158,8 +163,6 @@ section{
  	margin-top: 10px;
   padding: 40px;
   border-radius: 10px 10px 10px 10px ;
-  background-color: lightpink; 
- 
 
 }
 
@@ -190,8 +193,6 @@ section{
     align-self: flex-end; /* Seul ce bloc sera aligné à la fin */
 }
 
-/* ... */
-
 
 .basdepage{
 
@@ -208,7 +209,6 @@ section{
 }
 
 
-
 .basdepage div{
 
     padding: 10px;
@@ -216,8 +216,27 @@ section{
     height: auto;
 }
 
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 991px) {
+  .populaire, .hebergement, .activite, .actigrid, footer{
+    flex: 100%;
+    margin-right: 0%;
+    justify-content: center;
+    background-color: #FFFFFF;
+  }
 
-@media (max-width: 800px) {
+  .conteneur {
+    margin: 10px;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .flex-container {
+   justify-content: center;
+   flex-flow: wrap-reverse;
+
+  }
   .basdepage{
    flex-direction: column;
    align-items: center;
@@ -225,15 +244,20 @@ section{
   .basdepage div{
     width: 100%; 
   }
-
- .conteneur {
-    margin: 10px;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
+  section{
+    margin: auto;
   }
 
+}
+
+@media screen and(min-width: 768px),(max-width: 991px){ /* tablette */
+  .hebergement img {
+    width: 45%;
+  }
+  .conteneur{
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 /* Barre de recherche*/
@@ -242,6 +266,8 @@ section{
 
 .search {
   display: flex;
+  margin-left: 10px;
+  padding-left: 10px;
 }
 
 .searchButton {
@@ -283,6 +309,9 @@ form span i{ /* icone map */
 .fa-info {
   color:blue;
 }
+.fa-stack {
+  width: none;
+}
 
 .searchposition {
 
@@ -300,18 +329,70 @@ form span i{ /* icone map */
 
 header ul {
 
-        float: right;
+   float: right;
 }
 
 .navigations{
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-@media (max-width: 800px) {
-  .navigations{
-  flex-direction: column;
+
+@media (max-width: 991px) {
+  .inscription-desktop{
+    display: none!important;
+    
   }
+  .mobile-wrap{
+    display: block;
+    width: 50%;
+    text-align: end;
+  }
+  .logo-wrap, .mobile-wrap{
+    width: 50%;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px;
+    padding-left: 0px;
+  }
+  .divnav{
+    width: 100%;
+  }
+  #navigation li:hover{
+ 
+  border-bottom:2px solid #005fcc;
+  padding-bottom:20px;
+  }
+  header ul {
+    float: none;
+  }
+  #navigation li {
+  flex-basis: calc(50% - 20px);
+  text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .inscription-desktop{
+    display: inline-block;
+  }
+  .mobile-wrap{
+    display: none;
+    
+  }
+
+  #navigation li:hover{
+
+  color: #005fcc; 
+  border-top:2px solid #005fcc;
+  padding-top:20px;
+  font-weight: bold;
+}
 }
 
 #navigation li {
@@ -327,21 +408,16 @@ header ul {
   outline: none;
   text-decoration: none;
   padding: 2px 1px 0;
-
 }
 
-#navigation li :hover{
-
-  color: #005fcc; 
-  border-top:2px solid #005fcc;
-  padding-top:20px;
-  font-weight: bold;
-}
 
 a[href*="inscription"]{
-  color: #005fcc; 
+  color: #005fcc!important; 
+  font-weight: bold;
 }
-
+a[href*="inscription"]:link{
+  text-decoration: none;
+}
 
 /* Filtre*/
 
@@ -351,7 +427,7 @@ a[href*="inscription"]{
   border: 10px;
   outline: none;
   background-color: white;
-  border: 1px solid lightgrey;
+  border: 2px solid lightgrey;
   cursor: pointer;
   font-size: 15px;
   color :  black;
@@ -369,26 +445,37 @@ a[href*="inscription"]{
 }
 
 button i {
-    background-color: #e6e6e6;
+    background-color: #daf0fd;
     color: #005fcc;
     border-radius: 50%;
     padding: 20px;
 
 }
 .filtrebouton strong{
-   padding-left: 20px;
+   padding-left: 10px;
    padding-right: 10px;
 }
 
+@media (max-width: 991px) {
+  .filtrebouton {
 
-div p{
-  margin: auto;
+    margin: 10px;
+    font-size: 13px;
+
+  }
 }
+
 
 /* The Images */
 
 .reservia{
-  width: 200px;
+  width: 50%;
+}
+
+.picture{
+  width: 220px ;
+  height: 120px;
+  background-size: cover!important;
 }
 .hebergement img {
   display: block;
@@ -438,13 +525,20 @@ div p{
   transition: opacity 0.25s ease-in-out;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 991px) {
   .populaire img {
-  width: 250px ;
+  width: 100% ;
   border-radius: 10px 10px 0px 0px ;
-
   }
 }
+
+@media screen (max-width: 991px) {
+  .hebergement img {
+     width: 100% ;
+  }
+}
+
+
 
 .imag:hover, .imagacti:hover, .imagpopu:hover {
 
@@ -489,6 +583,7 @@ div p{
   
   margin: 5px;
   padding: .5rem;
+  width: 80%;
   font-size: 1.2rem;
   text-align: center;
   display: flex; /* met le texte a droite */
@@ -498,15 +593,25 @@ div p{
 }
 
 
-
- @media (max-width: 800px) {
+ @media (max-width: 991px) {
   .popu {
    flex-direction: column;
   text-align: left;
-
+  width: 100%;
+  }
+  .hebergement:hover, .populaire:hover, .activite:hover{
+    box-shadow: 5px 10px 18px #aaa;
+  }
+  .contour{
+    margin-bottom: 10px;
   }
 }
 
+@media  (min-width: 768px) and (max-width: 991px){ /* tablette */
+ .popu {
+    width: 80%;
+  }
+}
 
 /* Etoiles evaluation */
 
@@ -514,7 +619,5 @@ div p{
     color: #005fcc;
 }
 
-div span {
-    color: rgb(202, 202, 202);
-}
+
 

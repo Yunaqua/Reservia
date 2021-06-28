@@ -18,13 +18,19 @@
         <div class="container">
           
           <div class="navigations">
-            <img class="reservia" src="images/logo/Reservia@3x.png" alt="Reservia" title="Reservia"></i>
-            <ul id="navigation">
-              <li><a href="#hebergements" title="Hebergements">Hébergements</a></li>
-              <li><a href="#activites" title="Activité">Activité</a></li>
-              <li><a href="#" title="S'inscrire">S'inscrire</a></li>
-            </ul>
-            
+            <div class="logo-wrap">
+              <img class="reservia" src="images/logo/Reservia@3x.png" alt="Reservia" title="Reservia"/>
+            </div>
+            <div class="mobile-wrap">
+              <a href="#inscription" class="inscription-mobile" title="inscrire">S'inscrire</a>
+            </div>
+            <div class="divnav">
+              <ul id="navigation" class="nav">
+                <li><a href="#hebergements" title="Hebergements">Hébergements</a></li>
+                <li><a href="#activites" title="Activité">Activité</a></li>
+                <li class="inscription-desktop"><a href="#inscription" class="inscription" title="inscrire">S'inscrire</a></li>
+              </ul>
+            </div>
           </div> <!-- navigations -->
         </div> <!-- container -->
 
@@ -32,9 +38,11 @@
 
       <section>
         <div class="container">
+          <div class="info">
+            <h2> Trouver votre hébergement pour des vacances de rêve</h2>
+            <p>En plein centre ville ou en pleine nature</p>
+          </div>
           
-          <h2> Trouver votre hébergement pour des vacances de rêve</h2>
-          <p>En plein centre ville ou en pleine nature</p>
 
           <div>
             <div>
@@ -50,7 +58,7 @@
               
               <div id="filtre">
 
-                <strong>Filtres</strong> 
+                <p>Filtres</p>
                 
                 <button class="filtrebouton" onclick="filterSelection('economique')"><i class="fas fa-money-bill-wave"></i><strong>Economique</strong></button>
                 <button class="filtrebouton" onclick="filterSelection('familial')"><i class="fa fa-child"></i><strong>Familial</strong></button>
@@ -64,7 +72,7 @@
             <p><span class="fa-stack fa">
           <i class="fa fa-circle fa-stack icon-background"></i>
           <i class="fa fa-info fa-stack-1x"></i> 
-         </span>Plus de 500 logements sont disponibles dans cette ville</p>
+         </span><em>Plus de 500 logements sont disponibles dans cette ville</em></p>
             
 
         </div> <!-- container -->
@@ -80,10 +88,11 @@
 
 
                   <figure class="contour">
-                    <img class="imag"src="images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="symbol image" title="symbol image">
+                   
+                    <div class="picture" style="background:url('images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg') no-repeat center"></div> 
                     <figcaption><h2>Auberge la Cannebière</h2></figcaption>
 
-                    <div class="info">
+                    <div>
                       <p>Nuit à partir de <strong>25€</strong></p>
 
                       <span class="fa fa-star checked"></span>
@@ -189,7 +198,7 @@
                     <img src="images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="symbol image" title="symbol image">
                     <figcaption>
                       <h2>Hôtel Le soleil du matin</h2>
-                      <div>
+                      <div class="gna">
                       <p>Nuit à partir de <strong>128€</strong></p>
                       <span class="fa fa-star checked"></span>
                       <span class="fa fa-star checked"></span>
