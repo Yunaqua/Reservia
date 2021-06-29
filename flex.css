@@ -8,14 +8,19 @@ h2{
 
 	font-family: "raleway";
 	color: black;
- 	font-size: 19px;
+ 	font-size: 18px;
   font-weight: bold;
   overflow-wrap: anywhere;
  
 }
-.popu h2{
-  text-indent: 10px; 
+.contour h2{
+  margin-bottom: 2px;
 }
+
+/* .popu h2{
+  margin-left: 20px; 
+  text-align: left;
+} */
 h3{
 
   font-family: "raleway";
@@ -218,11 +223,17 @@ section{
 
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
 @media (max-width: 991px) {
-  .populaire, .hebergement, .activite, .actigrid, footer{
+  .hebergement, .activite, .actigrid, footer{
     flex: 100%;
     margin-right: 0%;
     justify-content: center;
     background-color: #FFFFFF;
+  }
+  .populaire{
+    flex: 100%;
+    margin-right: 0%;
+    justify-content: center;
+    background-color: #f1f1f1;
   }
 
   .conteneur {
@@ -251,7 +262,7 @@ section{
 }
 
 @media screen and(min-width: 768px),(max-width: 991px){ /* tablette */
-  .hebergement img {
+  .contour {
     width: 45%;
   }
   .conteneur{
@@ -476,24 +487,35 @@ button i {
   width: 220px ;
   height: 120px;
   background-size: cover!important;
+  border-radius: 10px 10px 0px 0px ;
+  transition: opacity 0.25s ease-in-out;
 }
-.hebergement img {
+/* .hebergement img {
   display: block;
   width: 220px ;
   height: 120px;
   border-radius: 10px 10px 0px 0px ;
   object-fit: cover;
   transition: opacity 0.25s ease-in-out;
+} */
+ 
+
+.popu .picture{
+  width: 40% ;
+  height: auto;
+  background-size: cover!important;
+  border-radius: 10px 0px 0px 10px ;
+  transition: opacity 0.25s ease-in-out;
 }
 
-.populaire img {
+/* .populaire img {
   display: block;
   width: 150px ;
   height: 120px;
   border-radius: 10px 0px 0px 10px ;
   object-fit: cover;
   transition: opacity 0.25s ease-in-out;
-}
+} */
 
 .imagactigrd {
 
@@ -526,19 +548,37 @@ button i {
 }
 
 @media (max-width: 991px) {
-  .populaire img {
+  .picture{
+    width: 100%;
+  }
+  .popu .picture {
   width: 100% ;
+  height: 150px;
   border-radius: 10px 10px 0px 0px ;
   }
 }
 
-@media screen (max-width: 991px) {
-  .hebergement img {
-     width: 100% ;
+
+@media (max-width: 675px) {
+ .popu .picture {
+  width: 100% ;
+  height: 120px;
+  border-radius: 10px 10px 0px 0px ;
   }
+  .imagactigrd {
+
+  height: 160px;
 }
 
-
+.imagacti2 {
+  
+  height: 160px;
+  }
+.imagacti3 {
+  
+  height: 160px;
+  }
+}
 
 .imag:hover, .imagacti:hover, .imagpopu:hover {
 
@@ -581,19 +621,26 @@ button i {
 
 .popu {
   
-  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
   padding: .5rem;
-  width: 80%;
+  margin: 2px;
+  width: 85%;
   font-size: 1.2rem;
-  text-align: center;
-  display: flex; /* met le texte a droite */
+  font-size: 1.2rem;
+  text-align: left;
   background-color: #FFFFFF;
   border-radius: 10px 10px 10px 10px ;
-  box-shadow: 5px 10px 18px #aaa; 
+  color: rgb(27, 27, 27);
+  box-shadow: 5px 10px 18px #aaa;
 }
 
+.popu figcaption {
+    width: 50%;
+    margin-left: 10px;
+}
 
- @media (max-width: 991px) {
+@media (max-width: 991px) {
   .popu {
    flex-direction: column;
   text-align: left;
@@ -604,6 +651,10 @@ button i {
   }
   .contour{
     margin-bottom: 10px;
+    width: 100%;
+  }
+  .popu figcaption {
+    width: 100%;
   }
 }
 
@@ -611,7 +662,11 @@ button i {
  .popu {
     width: 80%;
   }
+  .contour {
+    width: 45%;
+  }
 }
+
 
 /* Etoiles evaluation */
 
