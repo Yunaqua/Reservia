@@ -2,6 +2,9 @@
 html {
   scroll-behavior: smooth;
 }
+body{
+  margin: 0px;
+}
 /* Titre et police */
 
 h2{
@@ -53,11 +56,12 @@ p em{
   padding-left: 10px;
 }
 
-#filtre p{
+#filtre span{
   font-weight: bold;
   padding-top: 20px;
   margin-left: 10px;
   padding-left: 10px;
+  color: black;
 }
 .gna{
   justify-content: left;
@@ -78,7 +82,7 @@ p em{
 
 .page{
 
-  margin: 5px;
+  padding: 5px;
   
 }
 
@@ -166,7 +170,7 @@ section{
   flex-wrap: wrap; /* Retour à la ligne */
   justify-content: space-around;
  	margin-top: 10px;
-  padding: 40px;
+  padding: 20px;
   border-radius: 10px 10px 10px 10px ;
 
 }
@@ -198,12 +202,14 @@ section{
     align-self: flex-end; /* Seul ce bloc sera aligné à la fin */
 }
 
-
+footer{
+  overflow-x: hidden!important;
+}
 .basdepage{
 
+  background-color: #F2F2F2;
   padding: 30px; 
   margin-top: 10px;
-  background-color: #F2F2F2;
   border-radius: 10px 10px 10px 10px ;
   display: flex;
   flex-wrap: wrap;
@@ -318,10 +324,16 @@ form span i{ /* icone map */
 }
 
 .fa-info {
-  color:blue;
+  color:#0065fc;
 }
 .fa-stack {
   width: none;
+  margin-bottom:10px;
+}
+.fa-stack-1x{
+  border: 2px solid #F2F2F2;
+  border-radius: 50%;
+  display: flex;
 }
 
 .searchposition {
@@ -432,6 +444,13 @@ a[href*="inscription"]:link{
 
 /* Filtre*/
 
+#filtre{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+  
+
 .filtrebouton {
 
   margin: 20px;
@@ -456,7 +475,7 @@ a[href*="inscription"]:link{
 }
 
 button i {
-    background-color: #daf0fd;
+    background-color: #deebff;
     color: #005fcc;
     border-radius: 50%;
     padding: 20px;
@@ -468,11 +487,14 @@ button i {
 }
 
 @media (max-width: 991px) {
+  #filtre{
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .filtrebouton {
 
     margin: 10px;
     font-size: 13px;
-
   }
 }
 
@@ -502,7 +524,7 @@ button i {
 
 .popu .picture{
   width: 40% ;
-  height: auto;
+  /* height: auto; */
   background-size: cover!important;
   border-radius: 10px 0px 0px 10px ;
   transition: opacity 0.25s ease-in-out;
@@ -547,6 +569,13 @@ button i {
   transition: opacity 0.25s ease-in-out;
 }
 
+
+@media only screen  and (min-width : 910px) and (max-width : 1199px)    { /* laptop */
+  .imagactigrd{
+    width: 500px;
+  }
+}
+
 @media (max-width: 991px) {
   .picture{
     width: 100%;
@@ -559,16 +588,12 @@ button i {
 }
 
 
-@media (max-width: 675px) {
+@media (max-width: 675px 619) { /* plus petit que tablette */
  .popu .picture {
   width: 100% ;
   height: 120px;
   border-radius: 10px 10px 0px 0px ;
   }
-  .imagactigrd {
-
-  height: 160px;
-}
 
 .imagacti2 {
   
@@ -577,6 +602,22 @@ button i {
 .imagacti3 {
   
   height: 160px;
+  }
+}
+
+@media (max-width:619px ) { /* mobile */
+  .imagactigrd {
+
+    height: 160px;
+    width: 100%;
+  }
+  .imagacti2 {
+  
+    width: 100%;
+    }
+  .imagacti3 {
+    
+    width: 100%;
   }
 }
 
@@ -594,7 +635,7 @@ button i {
 .contour{
 
   padding: .5rem;
-  margin: 2px;
+  margin: 10px;;
   justify-content: space-around;
   font-size: 1.2rem;
   text-align: left;
@@ -624,9 +665,8 @@ button i {
   display: flex;
   flex-wrap: wrap;
   padding: .5rem;
-  margin: 2px;
-  width: 85%;
-  font-size: 1.2rem;
+  margin: 10px;
+  width: 100%;
   font-size: 1.2rem;
   text-align: left;
   background-color: #FFFFFF;
@@ -671,7 +711,7 @@ button i {
 /* Etoiles evaluation */
 
 .checked {
-    color: #005fcc;
+    color: #0065fc;
 }
 
 
