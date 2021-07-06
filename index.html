@@ -37,7 +37,7 @@
       </header>
 
       <section>
-        <div class="container">
+        <div id="information" class="container">
           <div class="info">
             <h2> Trouver votre hébergement pour des vacances de rêve</h2>
             <p>En plein centre ville ou en pleine nature</p>
@@ -45,12 +45,16 @@
           
 
           <div>
-            <div>
-              <form class="search">
+              <div class="search">
+                <span>
+                  <i class="fas fa-map-marker-alt"></i>
+                <input type="text" class="searchTerm" placeholder="Marseille, France">
+                <button type="submit" id="rechercher-desktop">Rechercher</button>
+                <button type="submit" id="rechercher-mobile">
+                  <i class="fa fa-search"></i></button>
+                </span>
+                
 
-                <span><i class="fas fa-map-marker-alt"></i><input type="text" class="searchTerm" placeholder="Marseille, France"><button type="submit" class="searchButton">Rechercher</button></span>
-
-                </form>
               </div>
 
 
@@ -82,11 +86,11 @@
         </div> <!-- container -->
       </section> <!-- section1 -->
 
-      <section id="hebergements">
+      <section >
         <div class="container">
           <div  class="flex-container">
-            <div class="hebergement">
-              <h2> Hébergements à Marseille</h2>
+            <div  id="hebergements" class="hebergement">
+              <h2 class="aligntitle"> Hébergements à Marseille</h2>
 
                 <div class="conteneur">
 
@@ -186,9 +190,9 @@
 
                 </div><!-- fin des images hebergements -->
 
-             <h2>Affichez plus</h2>
+             <h2 class="aligntitle">Affichez plus</h2>
 
-           </div><!-- herbegement -->
+           </div><!-- hebergement -->
 
             <div class ="populaire">
               <div >
@@ -201,15 +205,19 @@
                   <figure class="popu">
                     <div class="picture" style="background:url('images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg') no-repeat center"></div>
                    <figcaption>
-                      <h2>Hôtel Le soleil du matin</h2>
-                      <div class="gna">
-                      <p>Nuit à partir de <strong>128€</strong></p>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                    </div>
+                      
+                      <div>
+                        <h2>Hôtel Le soleil du matin</h2>
+                        <p>Nuit à partir de <strong>128€</strong></p>
+                      </div>
+                      
+                      <div>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                      </div>
 
                     </figcaption>
 
@@ -219,16 +227,18 @@
                   <figure class="popu">
                     <div class="picture" style="background:url('images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg') no-repeat center"></div>
                    <figcaption>
+                      <div>
+                        <h2>Au coeur de l'eau Chambres d'hôtes</h2>
+                        <p>Nuit à partir de <strong>71€</strong></p>
+                      </div>
                       
                       <div>
-                      <h2>Au coeur de l'eau Chambres d'hôtes</h2>
-                      <p>Nuit à partir de <strong>71€</strong></p>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                    </div>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
 
                     </figcaption>
 
@@ -238,16 +248,18 @@
                   <figure class="popu">
                     <div class="picture" style="background:url('images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg') no-repeat center"></div>
                    <figcaption>
-                      
-                      <div>
+                    <div>
                       <h2>Hôtel Tout bleu et Blanc</h2>
                       <p>Nuit à partir de <strong>68€</strong></p>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
                     </div>
+                      
+                      <div>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                      </div>
 
                     </figcaption>
 
@@ -272,7 +284,7 @@
         <div class="container">
           <div>
               <div class ="activite">
-            <h2> Activité à Marseille</h2>
+            <h2 class="aligntitle"> Activité à Marseille</h2>
             
             <div>
               <div class="actigrid">
