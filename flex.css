@@ -1,3 +1,7 @@
+@font-face {
+  font-family: raleway;
+  src: url(Raleway-VariableFont_wght.ttf);
+}
 
 html {
   scroll-behavior: smooth;
@@ -11,7 +15,7 @@ h2{
 
 	font-family: "raleway";
 	color: black;
- 	font-size: 18px;
+ 	font-size: 17px;
   font-weight: bold;
   overflow-wrap: anywhere;
  
@@ -28,7 +32,7 @@ h3{
 
   font-family: "raleway";
   color: black;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
   text-indent: 15px;
   padding: 5px;
@@ -41,8 +45,11 @@ p{
 
 div p{
   margin: auto;
-  padding: 10px;
 }
+/* .container div p {
+  margin: auto;
+  padding: 10px;
+} */
 
 .info{
   margin: 10px;
@@ -64,10 +71,10 @@ p em{
   padding-left: 10px;
   color: black;
 }
-.gna{
+/* .gna{
   justify-content: left;
   justify-items: left;
-}
+} */
 
 .list {
   list-style: none;
@@ -100,13 +107,7 @@ p em{
 
 }
 
-.container1{
-  max-width: 1250px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
 
-}
 aside{
   float:left;
 
@@ -163,6 +164,7 @@ section{
     justify-content: space-between;
     margin-top: 20px;
     font-size: 1.5em;
+    align-items: center
 }
 
 .activite{
@@ -236,11 +238,13 @@ footer{
     justify-content: center;
     background-color: #FFFFFF;
   }
+  
   .populaire{
     flex: 100%;
     margin-right: 0%;
     justify-content: center;
     background-color: #f1f1f1;
+    border-radius: 0% ;
   }
 
   .conteneur {
@@ -258,6 +262,7 @@ footer{
   .basdepage{
    flex-direction: column;
    align-items: center;
+   border-radius: 0% ;
   }
   .basdepage div{
     width: 100%; 
@@ -265,6 +270,11 @@ footer{
   section{
     margin: auto;
   }
+
+  .poputitre, .aligntitle{
+    margin-left: 20px;
+    margin-right: 20px;
+  } 
 
 }
 
@@ -287,8 +297,17 @@ footer{
   margin-left: 10px;
   padding-left: 10px;
 }
+.search span{
+    display: flex;
+    border: 2px solid #F2F2F2;
+    border-radius: 20px 20px 20px 20px;
+}
 
-.searchButton {
+#rechercher-mobile{
+    display: none;
+  }
+
+#rechercher-desktop {
 
   padding: 7px;
   border: 2px solid #0052ce;
@@ -298,31 +317,36 @@ footer{
   border-radius: 0 10px 10px 0;
   cursor: pointer;
 
-}
+  }
+
 .searchTerm {
   
-  border: 2px solid #F2F2F2;
+  border: 1px solid #F2F2F2;
+  background-color: white;
   padding: 7px;
   outline-color: #32a1ce;
   color: #9DBFAF;
 }
 
 form span i{ /* icone map */
-  color: black;
+ /*  color: black;
   background-color: #F2F2F2;
   padding: 5px;
   padding-bottom: 7px; 
   border-radius: 10px 0 0 10px;
   border: 2px solid #F2F2F2;
+ */
+}
+
+.fa-map-marker-alt{
+  color: black;
+  background-color: #F2F2F2;
+  padding: 12px; 
+  border-radius: 10px 0 0 10px;
+  border: 2px solid #F2F2F2;
 
 }
 
-.icon-background {
-    color: white;
-    border: 2px solid #F2F2F2;
-    border-radius: 50%;
-    
-}
 
 .fa-info {
   color:#0065fc;
@@ -349,7 +373,29 @@ form span i{ /* icone map */
   font-size: 20px;
 }
 
+@media (max-width: 991px) {
+   #rechercher-desktop{
+    display: none!important;
+    
+  }
+  #rechercher-mobile{
+    display: inline-block;
+    background-color:#0065fc;
+    border-radius: 10px 10px 10px 10px;
+  }
+  .searchTerm {
+  
+    border-right:none ;
+  }
+}
+
 /* Menu et naviagation*/
+
+/* header{
+  position: fixed;
+  background-color: white;
+} */
+
 
 header ul {
 
@@ -362,11 +408,15 @@ header ul {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    padding: 10px;
 }
 
 
 @media (max-width: 991px) {
+
+  /* header{
+  position: fixed;
+  background-color: white;
+  } */
   .inscription-desktop{
     display: none!important;
     
@@ -378,15 +428,30 @@ header ul {
   }
   .logo-wrap, .mobile-wrap{
     width: 50%;
-  }
+    padding: 10px;
+    }
+
   .nav {
+    padding: 0px;
     display: flex;
-    justify-content: space-evenly;
     margin: 0px;
-    padding-left: 0px;
   }
   .divnav{
     width: 100%;
+  }
+  header{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+  } 
+  #hebergements,#activites{ /* emplacement de l'ancre malgré le menu */
+    margin-top:-180px;
+    padding-top:180px;
+
+  }
+  #navigation li{
+    border-bottom: 2px solid #F2F2F2;
   }
   #navigation li:hover{
  
@@ -400,6 +465,9 @@ header ul {
   flex-basis: calc(50% - 20px);
   text-align: center;
   }
+  #information{
+    margin-top: 180px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -411,20 +479,24 @@ header ul {
     
   }
 
+
   #navigation li:hover{
 
   color: #005fcc; 
   border-top:2px solid #005fcc;
   padding-top:20px;
   font-weight: bold;
-}
+  }
+
 }
 
 #navigation li {
-  display: inline;
-  padding: 25px;
-  align-items: flex-end;
-  color: black;
+    
+    flex: 1;
+    display: inline;
+    padding: 25px;
+    align-items: flex-end;
+    color: black;
 }
 
 #navigation li a{
@@ -476,13 +548,14 @@ a[href*="inscription"]:link{
   font-weight: bold;
 }
 
-button i {
+#filtre button i {
     background-color: #deebff;
     color: #005fcc;
     border-radius: 50%;
     padding: 20px;
 
 }
+
 .filtrebouton strong{
    padding-left: 10px;
    padding-right: 10px;
@@ -490,13 +563,24 @@ button i {
 
 @media (max-width: 991px) {
   #filtre{
+    margin-top: 10px;
     flex-direction: column;
     align-items: flex-start;
   }
   .filtrebouton {
-
     margin: 10px;
-    font-size: 13px;
+  }
+ #rechercher-mobile {
+    background-color: #0065fc;
+    border-color: #0065fc;
+    color: white;
+    border-radius: 30%;
+    padding: 12px;
+
+  } 
+  .fa-search:before {
+    content: "\f002";
+    color: white;sea
   }
 }
 
@@ -576,9 +660,8 @@ button i {
     width: 100%;
   }
   .popu .picture {
-  width: 100% ;
+  width: 40% ;
   height: 150px;
-  border-radius: 10px 10px 0px 0px ;
   }
 }
 
@@ -634,9 +717,8 @@ button i {
   cursor: pointer;
 }
 .contour{
-
   padding: .5rem;
-  margin: 10px;;
+  margin: 10px;
   justify-content: space-around;
   font-size: 1.2rem;
   text-align: left;
@@ -679,29 +761,28 @@ button i {
 .popu figcaption {
     width: 50%;
     margin-left: 10px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 @media (max-width: 991px) {
   .popu {
-   flex-direction: column;
-  text-align: left;
-  width: 100%;
-  }
-  .hebergement:hover, .populaire:hover, .activite:hover{
-    box-shadow: 5px 10px 18px #aaa;
+    display: flex;
+    text-align: left;
   }
   .contour{
     margin-bottom: 10px;
     width: 100%;
   }
   .popu figcaption {
-    width: 100%;
+    width: 54%;
   }
 }
 
 @media  (min-width: 768px) and (max-width: 991px){ /* tablette */
  .popu {
-    width: 80%;
+    width: 45%;
   }
   .contour {
     width: 45%;
