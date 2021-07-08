@@ -6,8 +6,9 @@
 
    <link href="flex.css"  rel="stylesheet" type="text/css"/>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> <!-- Icone de recherche -->
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-   <title>Reservia</title> <!-- Icone de recherche fas -->
+   <link href="/media/examples/link-element-example.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"><!-- Icone de recherche fas -->
+   <title>Reservia</title> 
   </head>
 
   <body>
@@ -27,7 +28,7 @@
             <div class="divnav">
               <ul id="navigation" class="nav">
                 <li><a href="#hebergements" title="Hebergements">Hébergements</a></li>
-                <li><a href="#activites" title="Activité">Activité</a></li>
+                <li><a href="#activites" title="Activité">Activités</a></li>
                 <li class="inscription-desktop"><a href="#inscription" class="inscription" title="inscrire">S'inscrire</a></li>
               </ul>
             </div>
@@ -77,20 +78,18 @@
 
             </div>
 
-            <p><span class="fa-stack fa">
-          <!-- <i class="fa fa-circle fa-stack icon-background"></i> -->
-          <i class="fa fa-info fa-stack-1x"></i> 
-         </span><em>Plus de 500 logements sont disponibles dans cette ville</em></p>
+            <p><i class="fa fa-info circle-icon"></i><em>Plus de 500 logements sont disponibles dans cette ville</em></p>
             
 
         </div> <!-- container -->
       </section> <!-- section1 -->
 
-      <section >
+      <section id="mainhebergements">
         <div class="container">
           <div  class="flex-container">
             <div  id="hebergements" class="hebergement">
-              <h2 class="aligntitle"> Hébergements à Marseille</h2>
+              <div>
+                <h2 class="aligntitle"> Hébergements à Marseille</h2>
 
                 <div class="conteneur">
 
@@ -191,10 +190,12 @@
                 </div><!-- fin des images hebergements -->
 
              <h2 class="aligntitle">Affichez plus</h2>
+              </div>
+              
 
            </div><!-- hebergement -->
 
-            <div class ="populaire">
+            <div id="populaire"class ="populaire">
               <div >
                 <div class="poputitre">
                   <h2> Les plus populaires </h2><i class="fa fa-line-chart"></i>
@@ -328,7 +329,7 @@
             
             
           </div> <!-- activite -->
-          </div> <!-- flex-container -->
+          </div> 
         
           
         </div> <!-- container -->
