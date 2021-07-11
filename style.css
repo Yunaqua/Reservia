@@ -1,8 +1,10 @@
 @font-face {
   font-family: raleway;
-  src: url(Raleway-VariableFont_wght.ttf);
-  src: url(Raleway-Italic-VariableFont_wght.ttf);
-  src: url(static/Raleway-Bold.ttf);
+  src: url(Raleway-VariableFont_wght.ttf),
+  url(Raleway-Italic-VariableFont_wght.ttf),
+  url(static/Raleway-Bold.ttf);  
+  
+  
 }
 
 html {
@@ -37,13 +39,14 @@ h3{
   color: black;
   font-size: 16px;
   font-weight: bold;
-  text-indent: 15px;
+  text-indent: 10px;
   padding: 5px;
   
 }
 
 p{
-  font-size: 15px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 div p{
@@ -61,6 +64,7 @@ div span {
 
 p em{
   padding-left: 10px;
+  font-weight: 100;
 }
 
 #filtre span{
@@ -96,11 +100,11 @@ p em{
   
 }
 
-.main{
-  margin: auto;
-  max-width: 1400px;
-}
 
+/* .main{
+  
+}
+ */
 
 .container{
   
@@ -121,13 +125,17 @@ section{
 
 }
 
+header,section, .basdepage{
+  margin: auto;
+  max-width: 1400px; 
+}
+
+
 .conteneur
 {
     display: flex;
     flex-wrap: wrap; /* Retour à la ligne */
     justify-content: space-evenly;
-    padding: 2px;
-    margin: 10px;
 }
 
 
@@ -140,27 +148,38 @@ section{
 
 .hebergement {
 
- background-color: #f1f1f1;
- border-radius: 10px 10px 10px 10px ;
   padding: 20px;
-  flex: 62%;
-  margin-right: 3%;
+  width: 70%
+  /* margin-right: 3%; */
 
 }
+.hebergement > div {
 
+  background-color: #f1f1f1;
+  border-radius: 10px ;
+  padding: 2em 1em;
+
+}
 
 * { /* tous les elements */
   box-sizing: border-box;
 }
 .populaire{
 
-  background-color: #f1f1f1;
-  border-radius: 10px 10px 10px 10px ;
-  padding: 10px;
-  flex: 35%;
+  padding: 20px;
+  width: 30%;
   height: min-content;
 
 }
+
+.populaire > div{
+
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 10px 0;
+
+}
+
 .poputitre{
     display: flex;
     justify-content: space-between;
@@ -175,7 +194,7 @@ section{
   justify-content: space-between;
   margin-top: 10px;
   padding: 20px;
-  border-radius: 10px 10px 10px 10px ;
+  border-radius: 10px ;
 
 }
 
@@ -198,22 +217,18 @@ section{
     margin-bottom: auto ; */
 }
 
-.contouract:nth-child(2) /* On prend le deuxième bloc élément */
-{
-  
-    align-self: flex-end; /* Seul ce bloc sera aligné à la fin */
-}
 
-/* footer{
-  overflow-x: hidden!important;
-} */
+
+ footer{
+  
+  background-color: #F2F2F2;
+} 
 
 .basdepage{
 
-  background-color: #F2F2F2;
   padding: 30px; 
   margin-top: 10px;
-  border-radius: 10px 10px 10px 10px ;
+  border-radius: 10px ;
   display: flex;
   flex-wrap: wrap;
   flex-flow: row wrap;
@@ -230,7 +245,7 @@ section{
     height: auto;
 }
 .poputitre, .aligntitle{
-    margin-left: 20px;
+    margin:0 20px;
   } 
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
 @media (max-width: 991px) {
@@ -238,6 +253,9 @@ section{
     flex: 100%;
     margin-right: 0%;
     justify-content: center;
+  }
+  .hebergement > div{
+   
     background-color: #FFFFFF;
   }
   
@@ -281,10 +299,8 @@ section{
 
 }
 
+
 @media screen and(min-width: 768px),(max-width: 991px){ /* tablette */
-  .contour {
-    width: 45%;
-  }
   .conteneur{
     flex-direction: row;
     justify-content: space-around;
@@ -297,6 +313,8 @@ section{
 
 }
 
+
+
 /* Barre de recherche*/
 
 
@@ -308,10 +326,10 @@ section{
 .search span{
     display: flex;
     border: 2px solid #F2F2F2;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
 }
 
-#rechercher-mobile{
+#rechercher-mobile,.herbegerments-mobile{
     display: none;
   }
 
@@ -337,15 +355,6 @@ section{
   font-weight: bold;
 }
 
-form span i{ /* icone map */
- /*  color: black;
-  background-color: #F2F2F2;
-  padding: 5px;
-  padding-bottom: 7px; 
-  border-radius: 10px 0 0 10px;
-  border: 2px solid #F2F2F2;
- */
-}
 
 .fa-map-marker-alt{
   color: black;
@@ -387,14 +396,17 @@ form span i{ /* icone map */
 }
 
 @media (max-width: 991px) {
-   #rechercher-desktop{
+   #rechercher-desktop,.herbegerments-desktop{
     display: none!important;
     
   }
   #rechercher-mobile{
     display: inline-block;
     background-color:#0065fc;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
+  }
+  .herbegerments-mobile{
+    display: inline;
   }
   .searchTerm {
   
@@ -424,6 +436,7 @@ header ul {
     background-color: white;
     top: 0%;
     position: fixed;
+    padding:0 10px;
     width: 100%;
     max-width: 1400px;
     z-index: 1;
@@ -440,10 +453,6 @@ header ul {
   }
 @media (max-width: 991px) {
 
-  /* header{
-  position: fixed;
-  background-color: white;
-  } */
   .inscription-desktop{
     display: none!important;
     
@@ -463,8 +472,8 @@ header ul {
     display: flex;
     margin: 0px;
   }
-  .divnav{
-    width: 100%;
+  .divnav,.wrap-navigation{
+    width: 50%;
   }
   header{
     position: fixed;
@@ -477,14 +486,18 @@ header ul {
     padding-top:180px;
 
   }
-  #navigation li{
+  .navigations{
+    padding: 0px;
+  }
+  #navigation li, #navigation-mobile li{
     border-bottom: 2px solid #F2F2F2;
   }
-  #navigation li:hover{
+  #navigation li:hover,#navigation-mobile li:hover{ 
  
   border-bottom:2px solid #005fcc;
   padding-bottom:20px;
   }
+
   header ul {
     float: none;
   }
@@ -492,6 +505,14 @@ header ul {
   flex-basis: calc(50% - 20px);
   text-align: center;
   }
+  #navigation-mobile li {  /* gnou */
+    
+    flex: 1;
+    display: inline;
+    padding: 25px;
+    align-items: flex-end;
+    color: black;
+}
   #information{
     margin-top: 180px;
   }
@@ -517,7 +538,7 @@ header ul {
 
 }
 
-#navigation li {
+#navigation li {  /* gnou */
     
     flex: 1;
     display: inline;
@@ -535,6 +556,7 @@ header ul {
 }
 
 
+
 a[href*="inscription"]{
   color: #005fcc!important; 
   font-weight: bold;
@@ -548,7 +570,7 @@ a[href*="inscription"]:link{
 #filtre{
   display: inline-flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
 }
   
 
@@ -562,7 +584,7 @@ a[href*="inscription"]:link{
   cursor: pointer;
   font-size: 15px;
   color :  black;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   padding-left:  0px;
   padding-right: 20px;
 
@@ -608,6 +630,20 @@ a[href*="inscription"]:link{
     padding: 12px;
 
   } 
+ #navigation-mobile li a {
+    color: black;
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+
+#navigation-mobile li {
+    flex: 1;
+    display: inline;
+    padding: 25px;
+    color: black;
+    text-align: center;
+}
   .fa-search:before {
     content: "\f002";
     color: white;
@@ -622,7 +658,7 @@ a[href*="inscription"]:link{
 }
 
 .picture{
-  width: 220px ;
+  width: 100% ;
   height: 120px;
   background-size: cover!important;
   border-radius: 10px 10px 0px 0px ;
@@ -632,20 +668,12 @@ a[href*="inscription"]:link{
 
 .popu .picture{
   width: 40% ;
-  /* height: auto; */
+  height: 100%; 
   background-size: cover!important;
   border-radius: 10px 0px 0px 10px ;
   transition: opacity 0.25s ease-in-out;
 }
 
-/* .populaire img {
-  display: block;
-  width: 150px ;
-  height: 120px;
-  border-radius: 10px 0px 0px 10px ;
-  object-fit: cover;
-  transition: opacity 0.25s ease-in-out;
-} */
 
 .imagactigrd {
 
@@ -663,7 +691,7 @@ a[href*="inscription"]:link{
 
   background-size: cover!important;
   width: 250px ;
-  height: 120px;
+  height: 160px;
   border-radius: 20px 20px 0px 0px ;
   object-fit: cover;
   transition: opacity 0.25s ease-in-out;
@@ -672,7 +700,7 @@ a[href*="inscription"]:link{
 
   background-size: cover!important;
   width: 250px ;
-  height: 150px;
+  height: 120px;
   border-radius: 20px 20px 0px 0px ;
   object-fit: cover;
   transition: opacity 0.25s ease-in-out;
@@ -747,13 +775,15 @@ a[href*="inscription"]:link{
   cursor: pointer;
 }
 .contour{
+
+  width: 30%;
   padding: .5rem;
-  margin: 15px;
+  margin: 12px;
   justify-content: space-around;
   font-size: 1.2rem;
   text-align: left;
   background-color: #FFFFFF;
-  border-radius: 10px 10px 10px 10px ;
+  border-radius: 10px ;
   color: rgb(27, 27, 27);
   box-shadow: 5px 10px 18px #aaa; 
 
@@ -761,16 +791,20 @@ a[href*="inscription"]:link{
 
 .contouract{
 
-  /* text-indent: 5px; */
-  /* padding-bottom: 2.5rem; */
   background-color: #FFFFFF;
-  border-radius: 20px 20px 20px 20px ;
+  border-radius: 20px;
   box-shadow: 5px 10px 18px #aaa;
   color: black;
   font-size: 14px;
   text-align: left; 
   margin: 20px;
 
+}
+
+.contouract:nth-child(2) /* On prend le deuxième bloc élément */
+{
+  
+    align-self: flex-end; /* Seul ce bloc sera aligné à la fin */
 }
 
 .popu {
@@ -783,7 +817,7 @@ a[href*="inscription"]:link{
   font-size: 1.2rem;
   text-align: left;
   background-color: #FFFFFF;
-  border-radius: 10px 10px 10px 10px ;
+  border-radius: 10px ;
   color: rgb(27, 27, 27);
   box-shadow: 5px 10px 18px #aaa;
 }
@@ -794,6 +828,12 @@ a[href*="inscription"]:link{
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+@media (max-width:1131px ) {
+  .contour {
+    width: 45%;
+  }
 }
 
 @media (max-width: 991px) {
