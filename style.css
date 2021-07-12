@@ -1,10 +1,19 @@
 @font-face {
   font-family: raleway;
-  src: url(Raleway-VariableFont_wght.ttf),
-  url(Raleway-Italic-VariableFont_wght.ttf),
-  url(static/Raleway-Bold.ttf);  
+  src: url(Raleway-VariableFont_wght.ttf);  
   
   
+}
+@font-face {
+  font-family: raleway;
+  src:url(Raleway-Italic-VariableFont_wght.ttf);  
+ font-style: italic;
+  
+}
+@font-face {
+  font-family: raleway;
+  src:url(static/Raleway-ExtraBold.ttf);  
+  font-weight: bold;
 }
 
 html {
@@ -12,7 +21,7 @@ html {
 }
 body{
   margin: 0px;
-  font-family: "raleway";
+  font-family: "raleway", serif;
 }
 /* Titre et police */
 
@@ -45,7 +54,7 @@ h3{
 }
 
 p{
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
 }
 
@@ -136,8 +145,12 @@ header,section, .basdepage{
     display: flex;
     flex-wrap: wrap; /* Retour à la ligne */
     justify-content: space-evenly;
+    padding: 10px 0;
 }
 
+#hebergements .conteneur {
+    margin-bottom: 20px;
+}
 
 .flex-container {
    display: inline-flex;
@@ -416,10 +429,6 @@ header,section, .basdepage{
 
 /* Menu et naviagation*/
 
-/* header{
-  position: fixed;
-  background-color: white;
-} */
 
 
 header ul {
@@ -442,6 +451,9 @@ header ul {
     z-index: 1;
 }
 
+.wrap-navigation{
+  display: none;
+}
 #information {
     margin-top: 80px;
 }
@@ -474,6 +486,7 @@ header ul {
   }
   .divnav,.wrap-navigation{
     width: 50%;
+    display: block;
   }
   header{
     position: fixed;
@@ -777,7 +790,7 @@ a[href*="inscription"]:link{
 .contour{
 
   width: 30%;
-  padding: .5rem;
+  padding: .3rem;
   margin: 12px;
   justify-content: space-around;
   font-size: 1.2rem;
@@ -787,6 +800,11 @@ a[href*="inscription"]:link{
   color: rgb(27, 27, 27);
   box-shadow: 5px 10px 18px #aaa; 
 
+}
+
+.contour > div:nth-child(2) { /* alignement du text sous l'image */
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 .contouract{
@@ -811,9 +829,10 @@ a[href*="inscription"]:link{
   
   display: flex;
   flex-wrap: wrap;
-  padding: .5rem;
+  padding: .3rem;
   margin: 15px;
   width: 100%;
+  min-height: 140px;
   font-size: 1.2rem;
   text-align: left;
   background-color: #FFFFFF;
