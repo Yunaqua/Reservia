@@ -84,6 +84,12 @@ p em{
   color: black;
 }
 
+.basdepage li:hover {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .list {
   list-style: none;
   float:left;
@@ -197,6 +203,7 @@ header,section, .basdepage{
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    padding-top: 10px;
     font-size: 1.5em;
     align-items: center
 }
@@ -776,7 +783,9 @@ a[href*="inscription"]:link{
   }
 }
 
-.imag:hover, .imagacti:hover, .imagpopu:hover {
+
+.picture:hover, .imagacti:hover, .imagpopu:hover 
+{
 
   opacity: .7;
 }
