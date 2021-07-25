@@ -6,7 +6,7 @@
  
     <link rel="icon" type="image/png" href="images/logo/Reservia@3x.png" />
 
-   <link href="style.css"  rel="stylesheet" type="text/css"/>
+   <link href="asset/css/style.css"  rel="stylesheet" type="text/css"/>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> <!-- Icone de recherche -->
    <link href="/media/examples/link-element-example.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"><!-- Icone de recherche fas -->
@@ -14,7 +14,8 @@
   </head>
 
   <body>
-    <div class="main">
+
+    <main>
 
 
       <header>
@@ -81,11 +82,11 @@
                 </div>
                 <div>
                   
-                  <div class="boutton"><i class="fas fa-money-bill-wave"></i><span>Économique</span></div>
+                  <div class="boutton"><span class="boutton_icon"><i class="fas fa-money-bill-wave"></i></span><span class="boutton_text">Économique</span></div>
                 
-                  <div class="boutton"><i class="fa fa-child"></i><span>Familial</span></div>
-                  <div class="boutton"><i class="fa fa-heart"></i><span>Romantique</span></div>
-                  <div class="boutton"><i class="fas fa-dog"></i><span>Animaux autorisés</span></div>
+                  <div class="boutton"><span class="boutton_icon"><i class="fa fa-child"></i></span><span class="boutton_text">Familial</span></div>
+                  <div class="boutton"><span class="boutton_icon"><i class="fa fa-heart"></i></span><span class="boutton_text">Romantique</span></div>
+                  <div class="boutton"><span class="boutton_icon"><i class="fas fa-dog"></i></span><span class="boutton_text">Animaux autorisés</span></div>
                 </div>
                 
                 
@@ -103,7 +104,7 @@
       <section id="mainhebergements">
         <div class="container">
           <div  class="flex-container">
-            <div  id="hebergements" class="hebergement">
+            <article  id="hebergements" class="hebergement">
               <div>
                 <h1 class="aligntitle"> Hébergements à Marseille</h1>
 
@@ -227,9 +228,9 @@
               </div>
               
 
-           </div><!-- hebergement -->
+           </article><!-- hebergement -->
 
-            <div id="populaire"class ="populaire">
+            <aside id="populaire"class ="populaire">
               <div>
                 <div class="poputitre">
                   <h1> Les plus populaires </h1><i class="fa fa-line-chart"></i>
@@ -305,7 +306,7 @@
                 </div><!-- fin des images -->
                 
               </div> <!-- populaire interne -->
-            </div> <!-- populaire -->
+            </aside> <!-- populaire -->
 
           </div> <!-- flex-container -->
           
@@ -373,6 +374,8 @@
         
       </section> <!-- section3 -->
 
+    </main> <!-- main -->
+
       <footer class ="container">
           <div class="basdepage">
          
@@ -413,10 +416,7 @@
         
       </footer>  <!-- container -->
 
-    </div> <!-- main -->
-    
-
-
+  
 
   </body>
 </html>

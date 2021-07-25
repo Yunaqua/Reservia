@@ -1,13 +1,15 @@
+/********************  Police ******************* */
+
 @font-face {
   font-family: raleway;
-  src: url(Raleway-VariableFont_wght.ttf);  
+  src: url(../font/Raleway-VariableFont_wght.ttf);  
   
 font-weight: 500;  
 }
 
 @font-face {
   font-family: raleway;
-  src:url(static/Raleway-ExtraBold.ttf);  
+  src:url(../font/static/Raleway-ExtraBold.ttf);  
   font-weight: bold;
 }
 
@@ -18,7 +20,8 @@ body{
   margin: 0px;
   font-family: "raleway", serif;
 }
-/* Titre et police */
+
+/******************** Titre *********************/
 
 
 h1{
@@ -76,39 +79,15 @@ p em{
   font-weight: 100;
 }
 
-#filtre div span:nth-child(1){
+#filtre div .boutton_text{
   font-weight: bold;
-  padding-top: 20px;
   margin-left: 10px;
   padding-left: 10px;
-  color: black;
 }
 
-#filtre div span{
+#filtre div .boutton_text{
   font-weight: bold;
   padding-left: 10px;
-  color: black;
-}
-.basdepage li:hover {
-    color: blue;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.list {
-  list-style: none;
-  float:left;
-  margin: auto;
-}
-
-.list li {
-    margin-bottom: 7px;
-}
-
-@media (max-width:991px){
-  .list {
-    padding-bottom: 10px;
-    }
 }
 
 
@@ -116,19 +95,13 @@ p em{
 /* Page principale */
 
 
-/*Disposition */
+/********************  Disposition ********************/
 
 .page{
 
   padding: 5px;
   
 }
-
-
-/* .main{
-  
-}
- */
 
 .container{
   
@@ -138,10 +111,6 @@ p em{
 }
 
 
-aside{
-  float:left;
-
-}
 section{
   display: flex;
   flex-direction: column;
@@ -349,7 +318,7 @@ header,section, .basdepage{
 
 
 
-/* Barre de recherche*/
+/********************  Barre de recherche ******************* */
 
 
 
@@ -449,7 +418,7 @@ header,section, .basdepage{
   }
 }
 
-/* Menu et naviagation*/
+/********************  Menu et navigation ********************/
 
 
 
@@ -573,7 +542,7 @@ header ul {
 
 }
 
-#navigation li {  /* gnou */
+#navigation li { 
     
     flex: 1;
     display: inline;
@@ -600,13 +569,14 @@ a[href*="inscription"]:link{
   text-decoration: none;
 }
 
-/* Filtre*/
+/********************  Filtre ********************/
 
 #filtre{
   display: inline-flex;
   flex-direction: row;
   align-items: baseline;
-  padding: 20px 0;
+  padding: 20px 10px;
+  font-weight: bold;
 }
   
 
@@ -626,13 +596,18 @@ a[href*="inscription"]:link{
 
 }
 
-#filtre i {
+#filtre .boutton_icon {
     background-color: #deebff;
     color: #005fcc;
     border-radius: 50%;
-    padding: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    display: inline-block;
 
 }
+
 
 #filtre div:nth-child(2) {
    
@@ -642,49 +617,23 @@ a[href*="inscription"]:link{
     flex-direction: row;
     align-content: center;
 }
-/* 
 
-.filtrebouton {
-
-  margin: 20px;
-  border: 10px;
-  outline: none;
-  background-color: white;
-  border: 2px solid lightgrey;
-  cursor: pointer;
-  font-size: 15px;
-  color :  black;
-  border-radius: 30px;
-  padding-left:  0px;
-  padding-right: 20px;
-
-}
-*/
 .boutton:hover{
 
   background-color: #005fcc;
   color: white;
-  opacity: .7;
   font-weight: bold;
 } 
 
-#filtre .boutton span:hover {
-  color: white;
+i.fa.fa-child {
+    font-size: 19px;
+}
+i.fas.fa-dog {
+    font-size: 18px;
 }
 
-#filtre button i {
-    background-color: #deebff;
-    color: #005fcc;
-    border-radius: 50%;
-    padding: 20px;
 
-}
 
-/* .filtrebouton strong{
-   padding-left: 10px;
-   padding-right: 10px;
-}
- */
 
 @media (max-width: 991px) {
   #filtre{
@@ -697,7 +646,7 @@ a[href*="inscription"]:link{
   }
  #rechercher-mobile {
     background-color: #0065fc;
-    border-color: #0065fc;
+    border: 1px solid #0065fc;
     color: white;
     border-radius: 30%;
     padding: 12px;
@@ -723,8 +672,34 @@ a[href*="inscription"]:link{
   }
 }
 
+/********************  Liste ********************/
 
-/* The Images */
+
+.basdepage li:hover {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.list {
+  list-style: none;
+  float:left;
+  margin: auto;
+}
+
+.list li {
+    margin-bottom: 7px;
+}
+
+@media (max-width:991px){
+  .list {
+    padding-bottom: 10px;
+    }
+}
+
+
+
+/********************  The Images ********************/
 
 .reservia{
   width: 40%;
@@ -802,11 +777,6 @@ a[href*="inscription"]:link{
 
 
 @media (max-width: 675px) { /* plus petit que tablette */
- /* .popu .picture {
-  width: 100% ;
-  height: 120px;
-  border-radius: 20px 20px 0px 0px ;
-  } */
 
 .imagacti2 {
   
@@ -819,6 +789,9 @@ a[href*="inscription"]:link{
 }
 
 @media (max-width:619px ) { /* mobile */
+  .hebergement > div {
+    padding: 2em 0em;
+  }
   .actisplit {
     display: inline-flex;
     width: 100%;
@@ -852,7 +825,8 @@ a[href*="inscription"]:link{
   opacity: .7;
 }
 
-/* Contour */
+/********************  Contour ********************/
+
 .contour:hover, .popu:hover,.contouract:hover{
  
   transform: scale(1.1); 
@@ -951,7 +925,7 @@ a[href*="inscription"]:link{
 }
 
 
-/* Etoiles evaluation */
+/********************  Etoiles evaluation ********************/
 
 i.fa.fa-star {
     font-size: 15px;
